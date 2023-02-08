@@ -1,0 +1,40 @@
+body {
+    size: 15px;
+    font-family: Roboto, 'Open Sans', sans-serif;
+    color: #8e9ca5;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+  
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+a {
+    color: #69acc7;
+    text-decoration: none;
+}
+
+small {
+    font-size: 80%;
+    color: #69ACC7;
+}
+
+strong {
+    font-weight: bold;
+}
+
+address {
+    font-style: normal;
+}
