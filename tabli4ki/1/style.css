@@ -1,0 +1,34 @@
+table {
+    border: 1px solid black;
+    /* border-spacing: 0; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr {
+    height: 30px;
+}
+
+table td {
+    border: 1px solid black;
+}
+
+table colgroup:first-of-type col,
+table colgroup:last-of-type col {
+    width: 20px;
+    background-color: brown;
+}
+
+table colgroup:nth-of-type(2) col:first-child {
+    width: 50%;
+    background-color: cadetblue;
+}
+
+table colgroup:nth-of-type(2) col:last-child {
+    width: 500%;
+    background-color: tomato;
+}
+
+td:hover {
+    background-color: yellowgreen;
+}

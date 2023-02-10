@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
 body {
     size: 15px;
     font-family: Roboto, 'Open Sans', sans-serif;
@@ -13,7 +18,7 @@ h1 {
   
 h2 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 h3 {
@@ -24,6 +29,7 @@ h3 {
 a {
     color: #69acc7;
     text-decoration: none;
+    font-weight: 100;
 }
 
 small {

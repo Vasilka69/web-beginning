@@ -1,0 +1,36 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+table {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+thead {
+    border: 1px;
+    border-color: black;
+    border-bottom: 0;
+    border-style: solid;
+}
+
+tbody {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.inactive {
+    color: gray;
+}
+
+tbody tr td:nth-child(6), tbody td:nth-child(7) {
+    color: red;
+}
+
+td {
+    padding: 15px;
+}

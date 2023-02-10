@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+table {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+thead {
+    border: 1px;
+    border-color: rgb(2, 2, 197);
+    border-bottom: 0;
+    border-style: solid;
+    color: rgb(2, 2, 197);
+    text-transform: uppercase;
+}
+
+thead td {
+    border: 1px solid;
+    border-bottom: 0;
+}
+
+tbody {
+    border: 1px;
+    border-color: rgba(16, 92, 255, 0.712);
+    border-top: 0;
+    border-style: solid;
+    color: rgb(202, 146, 255);
+}
+
+tbody td {
+    border-right: 1px dotted rgba(16, 92, 255, 0.712);
+}
+
+
+td {
+    padding: 15px;
+}
