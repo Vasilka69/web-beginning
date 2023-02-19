@@ -20,12 +20,12 @@ table colgroup:last-of-type col {
 }
 
 table colgroup:nth-of-type(2) col:first-child {
-    width: 50%;
+    width: 70%;
     background-color: cadetblue;
 }
 
 table colgroup:nth-of-type(2) col:last-child {
-    width: 500%;
+    width: 30%;
     background-color: tomato;
 }
 

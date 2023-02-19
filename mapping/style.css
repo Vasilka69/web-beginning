@@ -1,0 +1,42 @@
+.vizitka {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* .vizitka td {
+    border: 1px solid black;
+} */
+
+.kartinka {
+    min-width: 10px;
+    /* width: 25%; */
+}
+
+.vizitka col:last-of-type {
+    width: 100%;
+}
+
+.divvizitka {
+    margin-bottom: 1000px;
+}
+
+area {
+    background-color: blueviolet;
+}
+
+.mainpicture {
+    text-align: center;
+}
+
+.text1 {
+    text-align: center;
+}
+
+.text2 {
+    text-align: center;
+}
+
+.text3 {
+    text-align: justify;
+}
