@@ -27,6 +27,10 @@ tbody {
     color: gray;
 }
 
+.today {
+    font-weight: 700;
+}
+
 tbody tr td:nth-child(6), tbody td:nth-child(7) {
     color: red;
 }
