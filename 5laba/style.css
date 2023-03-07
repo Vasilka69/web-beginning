@@ -1,0 +1,51 @@
+.template {
+    margin-top: 100px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: aliceblue;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.first-row {
+    display: flex;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+}
+
+.image img{
+    width: 100%;
+}
+
+.second-row {
+    height: 20px;
+    background-color: brown;
+    text-align: center;
+}
+
+.text1 {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+}
+
+.title {
+    align-self: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+.title p {
+    transform: rotate(-90deg);
+}
