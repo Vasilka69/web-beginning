@@ -8,6 +8,10 @@ body {
     font-family: Roboto, 'Open Sans', sans-serif;
     color: #8e9ca5;
     font-weight: 300;
+    /* background-color: #eeeeee; */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
 
 h1 {
@@ -43,4 +47,133 @@ strong {
 
 address {
     font-style: normal;
+}
+
+.site-title {
+    font-size: 1.06em;
+    z-index: 2;
+}
+
+.header-bar {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    position: absolute;
+    border-radius: 5px;
+    /* width: 970px; */
+    width: 600px;
+    left: 5%;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.branding img {
+    /* box-sizing: border-box; */
+    height: 46px;
+    width: 30px;
+    /* margin-top: 5%; */
+    float: left;
+}
+
+.logo-type {
+    /* padding: 0px 15px; */
+    padding: 10px 0px;
+}
+
+.header-bar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* line-height: normal; */
+}
+/* 
+.aa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+} */
+
+.header-bar ul li a {
+    color: #8e9ca5;
+}
+
+.slider {
+    background-image: url(../images/slider-1.jpg);
+    width: 100%;
+    height: 700px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-align: center;
+    padding-top: 300px;
+    
+}
+
+.slider text {
+    margin: 0;
+}
+
+.button {
+    background-color: #e7edf1;
+    font-size: 1.2em;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #8e9ca5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    transition: .3s ease;
+}
+
+.button:hover {
+    background-color: #69acc7;
+    color: white;
+}
+
+.fullwidth-block {
+    width: 100%;
+}
+
+.container {
+    margin: 66px;
+    /* justify-content: space-around; */
+    /* text-align: center; */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.feature {
+    border: 1px solid #e1e8ec;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    padding: 30px;
+    margin: 15px;
+}
+
+.latest-news {
+    background-color: #edf2f4;
+    font-size: 14px;
+}
+
+.latest-news img {
+    border-radius: 5px;
+    width: 360px;
+    height: 220px;
+}
+
+.post {
+
+}
+
+.post::after {
+    background-image: url(../images/arrow-long.png);
 }
