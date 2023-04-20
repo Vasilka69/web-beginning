@@ -2,15 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     padding: 20px;
 }
 
-input[type='text'],
+input[type="text"],
 textarea {
     padding: 5px 10px;
     margin-bottom: 5px;
@@ -18,21 +16,19 @@ textarea {
 }
 
 textarea {
-    height: 70px;
+    min-height: 70px;
     resize: vertical;
 }
 
 select {
     padding: 5px 10px;
+    margin-right: 45px;
 }
 
 button {
     padding: 5px 10px;
-
     margin: 5px 0;
-    background-color: white;
     color: black;
-    text-transform: uppercase;
 
     cursor: pointer;
 }
@@ -42,36 +38,15 @@ button + button {
 }
 
 button.active {
-    background-color: black;
-    color: white;
+    background-color: white;
 }
 
-.bordered {
-    padding: 20px;
+.panel {
     width: 350px;
-    border: 1px solid black;
-    box-shadow: 5px 5px black;
-
-    margin-bottom: 15px;
-}
-
-.title {
-    display: inline-block;
-    padding: 5px 15px;
-    margin-bottom: 15px;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
 }
 
 .main {
     width: 805px;
-}
-
-.main .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .cards {
@@ -79,7 +54,7 @@ button.active {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
-
+    margin-top: 10px;
     gap: 5px;
 }
 
@@ -94,7 +69,5 @@ button.active {
 }
 
 .paginator {
-    border-top: 1px solid black;
-    padding-top: 10px;
     display: inline-block;
 }

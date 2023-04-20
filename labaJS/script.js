@@ -1,59 +1,34 @@
 // элементы управления
-let inputName = document.querySelector('#name');
-let inputTitle = document.querySelector('#jobTitle');
-let inputSkills = document.querySelector('#skills');
-let inputCount = document.querySelector('#count');
-let okButton = document.querySelector('#submitButton');
+let inputName = document.querySelector("#name");
+let inputTitle = document.querySelector("#jobTitle");
+let inputSkills = document.querySelector("#skills");
+let inputCount = document.querySelector("#count");
+let okButton = document.querySelector("#submitButton");
 
 // место для карточек
-let cardsList = document.querySelector('#cards');
+let cardsList = document.querySelector("#cards");
 // место для кнопок пагинации
-// let pagesList = document.querySelector('#pagesList');
-let pagesList = document.getElementById('pagesList');
+let pagesList = document.querySelector("#pagesList");
 
 // начальный список карточек
 let initialCards = [
     {
         id: 1,
-        name: 'Гена',
-        job: 'Сантех',
-        skills: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+        name: "Гена",
+        job: "Сантех",
+        skills: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     },
     {
         id: 2,
-        name: 'Саня',
-        job: 'Мурилка',
-        skills: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+        name: "Саня",
+        job: "Мурилка",
+        skills: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     },
     {
         id: 3,
-        name: 'Василка',
-        job: 'Дурилка',
-        skills: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-    },
-    {
-        id: 4,
-        name: 'Петрович',
-        job: 'Сторож',
-        skills: '4Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-    },
-    {
-        id: 5,
-        name: 'Людка',
-        job: 'Продавец',
-        skills: '5Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-    },
-    {
-        id: 6,
-        name: 'Ржавый',
-        job: 'Скамер',
-        skills: '6Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-    },
-    {
-        id: 7,
-        name: 'Кентик 4 с кнопкой',
-        job: 'Студент',
-        skills: '7Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+        name: "Ваня",
+        job: "Курилка",
+        skills: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     },
 ];
 
@@ -63,27 +38,25 @@ let currentPage = 1;
 
 // массив всех карточек
 let allCards = [...initialCards];
-// массив только видимых карточек (не изменяет исходный массив)
-let visibleCards = allCards.slice(0);
+// массив только видимых карточек
+let visibleCards = [];
 
 // сделать карточку на основании объекта
 function createHtmlDiv({ id, name, job, skills }) {
-    let div = document.createElement('div');
-    div.classList.add('card');
+    let div = document.createElement("div");
+    div.classList.add("card");
 
-    // в div вставить нужное содержимое
     div.innerHTML = `
         <p class="name">${id}. ${name}</p>
         <p class="job">${job}</p>
         <p class="skills">${skills}</p>
     `;
-
-    return div; // вернуть готовый div
+    return div;
 }
 
 // обновить список карточек на странице
 function rerenderCards() {
-    cardsList.innerHTML = ''; // затереть предыдущие карточки
+    cardsList.innerHTML = ""; // затереть предыдущие карточки
 
     // устанавливаем, какие карточки отображать ОТ (вкл) ДО (не вкл)
     let start = (currentPage - 1) * itemsOnPage;
@@ -99,29 +72,27 @@ function rerenderCards() {
 
 // обновить список пагинации на странице
 function rerenderButtons() {
-    // функция для перерисовки классов
+    // проходим по всем кнопкам в pagesList и добавляем/убираем класс
     function refreshActiveClass() {
-        // проходим по всем кнопкам в pagesList и добавляем/убираем класс
         pagesList.childNodes.forEach((button) => {
-            if (+button.innerText === currentPage) {
-                button.classList.add('active');
+            if (Number(button.innerText) === currentPage) {
+                button.classList.add("active");
             } else {
-                button.classList.remove('active');
+                button.classList.remove("active");
             }
         });
     }
 
-    pagesList.innerHTML = ''; // затереть предыдущий список
+    pagesList.innerHTML = ""; // убрать предыдущий список
 
     let countPages = Math.ceil(allCards.length / itemsOnPage); // всего страниц
 
-    // для каждой паги создаем кнопку и вставляем на страницу
+    // для каждой page создаем кнопку и вставляем на страницу
     for (let i = 1; i <= countPages; i++) {
-        let button = document.createElement('button');
+        let button = document.createElement("button");
         button.innerText = i;
 
-        // вешаем прослушиватель события "клик" на каждую кнопку
-        button.addEventListener('click', (e) => {
+        button.addEventListener("click", (e) => {
             currentPage = +e.target.innerHTML;
             rerenderCards(); // обновляем карточки
             refreshActiveClass(); // перерисовываем классы
@@ -139,7 +110,7 @@ rerenderCards();
 rerenderButtons();
 
 // нажатие на кнопку добавления карточки (OK)
-okButton.addEventListener('click', (e) => {
+okButton.addEventListener("click", (e) => {
     // создание нового обьъекта карточки
     let newCard = {
         id: allCards.length + 1,
@@ -152,9 +123,9 @@ okButton.addEventListener('click', (e) => {
     allCards.push(newCard);
 
     // обнуление инпутов
-    inputName.value = '';
-    inputTitle.value = '';
-    inputSkills.value = '';
+    inputName.value = "";
+    inputTitle.value = "";
+    inputSkills.value = "";
 
     // перерисовать список карточек и пагинацию
     rerenderCards();
@@ -162,8 +133,8 @@ okButton.addEventListener('click', (e) => {
 });
 
 // изменение колчества отображаемых карточек на странице
-inputCount.addEventListener('change', () => {
-    itemsOnPage = +inputCount.value; // считываем на что нажали
+inputCount.addEventListener("change", () => {
+    itemsOnPage = Number(inputCount.value); // считываем на что нажали
     currentPage = 1; // переприсваиваем текущую страницу
 
     // идем на первую страницу и перерисовываем краточки и пиганицию

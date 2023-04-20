@@ -9,21 +9,29 @@
     </head>
     <body>
         <!-- Добавление другалька -->
-        <div class="add-user-fields bordered">
-            <p class="title">Добавить нового другалька</p>
-
+        <div class="add-user-fields panel">
             <div>
-                <!-- <label for="name">Имя</label> -->
-                <input type="text" name="name" id="name" placeholder="Введите имя" />
+                <label for="name">Имя</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Введите имя"
+                />
             </div>
 
             <div>
-                <!-- <label for="jobTitle">Должность</label> -->
-                <input type="text" name="jobTitle" id="jobTitle" placeholder="Введите должность" />
+                <label for="jobTitle">Должность</label>
+                <input
+                    type="text"
+                    name="jobTitle"
+                    id="jobTitle"
+                    placeholder="Введите должность"
+                />
             </div>
 
             <div>
-                <!-- <label for="skills">Личные качества</label> -->
+                <label for="skills">Личные качества</label>
                 <textarea
                     name="skills"
                     id="skills"
@@ -31,23 +39,20 @@
                 ></textarea>
             </div>
 
-            <button id="submitButton">ОК</button>
+            <button id="submitButton">Добавить</button>
         </div>
 
         <!-- Список другальков -->
-        <div class="main bordered">
-            <div class="header">
-                <p class="title">Список другальков</p>
-                <div>
-                    <label for="count">Элементов на странице</label>
-                    <select name="count" id="count">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3" selected>3</option>
-                        <option value="5">5</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
+        <div class="main panel">
+            <div>
+                <label for="count">Элементов на странице</label>
+                <select name="count" id="count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="5">5</option>
+                    <option value="9">9</option>
+                </select>
             </div>
 
             <div class="cards" id="cards"></div>
