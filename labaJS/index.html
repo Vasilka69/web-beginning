@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Добавление другалька -->
+        <div class="add-user-fields bordered">
+            <p class="title">Добавить нового другалька</p>
+
+            <div>
+                <!-- <label for="name">Имя</label> -->
+                <input type="text" name="name" id="name" placeholder="Введите имя" />
+            </div>
+
+            <div>
+                <!-- <label for="jobTitle">Должность</label> -->
+                <input type="text" name="jobTitle" id="jobTitle" placeholder="Введите должность" />
+            </div>
+
+            <div>
+                <!-- <label for="skills">Личные качества</label> -->
+                <textarea
+                    name="skills"
+                    id="skills"
+                    placeholder="Введите личные качества"
+                ></textarea>
+            </div>
+
+            <button id="submitButton">ОК</button>
+        </div>
+
+        <!-- Список другальков -->
+        <div class="main bordered">
+            <div class="header">
+                <p class="title">Список другальков</p>
+                <div>
+                    <label for="count">Элементов на странице</label>
+                    <select name="count" id="count">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="5">5</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="cards" id="cards"></div>
+
+            <!-- Пагинация -->
+            <div class="paginator" id="paginator">
+                <!-- место для добавления пагинации -->
+                <div id="pagesList"></div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

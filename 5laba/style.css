@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
 }
+
+.main {
+    background-color: gay;
+}
+
 .cards {
     width: 100%;
     display: flex;
@@ -23,7 +28,7 @@
     width: 100%;
 }
 
-.image img{
+.image img {
     height: 100%;
 }
 
@@ -39,27 +44,9 @@
     text-align: center;
 }
 
-.text1 p{
+.text1 p {
     background-color: aqua;
     text-align: center;
     position: relative;
     top: 50%;
-}
-
-.main {
-    display: flex;
-}
-
-.title {
-    align-self: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
-}
-
-.title p {
-    transform: rotate(-90deg);
-}
-
-.template {
-    margin-top: 100px;
 }

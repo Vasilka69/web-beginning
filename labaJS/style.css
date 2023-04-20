@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    padding: 20px;
+}
+
+input[type='text'],
+textarea {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+textarea {
+    height: 70px;
+    resize: vertical;
+}
+
+select {
+    padding: 5px 10px;
+}
+
+button {
+    padding: 5px 10px;
+
+    margin: 5px 0;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+button + button {
+    margin-left: 5px;
+}
+
+button.active {
+    background-color: black;
+    color: white;
+}
+
+.bordered {
+    padding: 20px;
+    width: 350px;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+
+    margin-bottom: 15px;
+}
+
+.title {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.main {
+    width: 805px;
+}
+
+.main .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    gap: 5px;
+}
+
+.card {
+    width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card p + p {
+    margin-top: 5px;
+}
+
+.paginator {
+    border-top: 1px solid black;
+    padding-top: 10px;
+    display: inline-block;
+}
