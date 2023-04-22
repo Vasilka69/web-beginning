@@ -178,7 +178,7 @@ address {
 .hero input {
     margin-right: 20px;
     /* display: none; */
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .hero input:last-child {
@@ -208,11 +208,13 @@ address {
 
     border-radius: 50%;
     cursor: pointer;
-    position: absolute;
+    /* position: absolute; */
 
     margin-right: 15px;
 
     top: 680px;
+    display: inline-block;
+    position: relative;
     z-index: 2;
 
     transform: translateX(-30px);
@@ -221,19 +223,19 @@ address {
 /* .hero label:last-child {
     margin-right: 0;
 } */
-.hero input + label::after {
+.hero input label::after {
     content: "";
     position: absolute;
     height: 17px;
     width: 17px;
-    animation: auto-slider 3s linear infinite;
+    /* animation: auto-slider 3s linear infinite; */
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     background-color: #69acc7;
     /* visibility: hidden; */
     /* visibility: visible; */
-    opacity: 0;
+    /* opacity: 0; */
     border-radius: 50%;
 }
 
@@ -248,7 +250,9 @@ address {
     animation-delay: 2s;
 }
 
-.hero input:checked + label::after {
+.hero #slide1_control:checked label[for="slide1_control"]::after,
+.hero #slide2_control:checked label[for="slide2_control"]::after,
+.hero #slide3_control:checked label[for="slide3_control"]::after {
     content: "";
     position: absolute;
     height: 17px;
@@ -589,4 +593,9 @@ form select {
     animation: none;
     /* opacity: 0;
     visibility: hidden; */
+}
+
+.hero #slide3_control:checked ~ label {
+    background-color: brown;
+    content: "sdfasfas";
 }
