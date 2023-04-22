@@ -584,7 +584,9 @@ form select {
     }
 }
 
-.slide {
+.hero input:checked + label::after {
+    background-color: #fcff9f;
+    animation: none;
     /* opacity: 0;
     visibility: hidden; */
 }
