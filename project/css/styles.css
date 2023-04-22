@@ -206,6 +206,8 @@ address {
     width: 25px;
 
     background-color: white;
+    border: 4px white solid;
+    box-sizing: border-box;
 
     border-radius: 50%;
     cursor: pointer;
@@ -217,12 +219,13 @@ address {
     z-index: 2;
 
     transform: translateX(-30px);
+    animation: auto-slider 3s linear infinite;
 }
 
 /* .hero label:last-child {
     margin-right: 0;
 } */
-.hero input + label::after {
+/* .hero input + label::after {
     content: "";
     position: absolute;
     height: 17px;
@@ -233,23 +236,24 @@ address {
     left: 50%;
     background-color: #69acc7;
     /* visibility: hidden; */
-    /* visibility: visible; */
+/* visibility: visible; */
+/*
     opacity: 0;
     border-radius: 50%;
+} */
+
+.hero input:nth-of-type(1) + label {
 }
 
-.hero input:nth-of-type(1) + label::after {
-}
-
-.hero input:nth-of-type(2) + label::after {
+.hero input:nth-of-type(2) + label {
     animation-delay: 1s;
 }
 
-.hero input:nth-of-type(3) + label::after {
+.hero input:nth-of-type(3) + label {
     animation-delay: 2s;
 }
 
-.hero input:checked + label::after {
+/* .hero input:checked + label::after {
     content: "";
     position: absolute;
     height: 17px;
@@ -261,11 +265,18 @@ address {
 
     border-radius: 50%;
     /* animation: auto-slider 3s linear infinite; */
-    /* animation-name: auto-slider;
+/* animation-name: auto-slider;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite; */
-    /* animation-delay: 1s; */
+/* animation-delay: 1s; */
+/*
+} */
+
+.hero input:checked + label {
+    background-color: #69acc7;
+    border: 4px white solid;
+    animation: auto-slider 3s linear infinite;
 }
 
 .hero .slide {
@@ -557,16 +568,20 @@ form select {
 
 @keyframes auto-slider {
     0% {
-        opacity: 1;
+        /* opacity: 1; */
+        background-color: blue;
     }
     32% {
-        opacity: 1;
+        /* opacity: 1; */
+        background-color: blue;
     }
     33% {
-        opacity: 0;
+        /* opacity: 0; */
+        background-color: white;
     }
     100% {
-        opacity: 0;
+        /* opacity: 0; */
+        background-color: white;
     }
 }
 
@@ -588,10 +603,19 @@ form select {
 /* .hero input:checked ~ label::after,
 .hero label::after ~ input:checked ~ label::after { */
 /* .hero input:checked + label::after { */
+/* 
 .hero input:checked + label {
-    background-color: blue;
-    border: 4px white solid;
+    /* background-color: #69acc7;
+    border: 4px white solid; */
+/*
     animation: none;
     /* opacity: 0;
     visibility: hidden; */
+/*
+} */
+
+.hero input:checked ~ label {
+    /* .hero label ~ input:checked,
+.hero label ~ label ~ input:checked label { */
+    animation: none;
 }
