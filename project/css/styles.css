@@ -165,16 +165,16 @@ address {
     /* padding-top: 800px; */
     text-align: center;
 
-    top: -30px;
-    top: 150px;
+    /* top: -30px; */
+    /* top: 150px; */
     background-image: url("../images/slider-1.jpg");
     animation: auto-slider-for-slider 3s linear infinite;
 }
 
 .hero input {
-    margin-right: 20px;
-    margin-top: 35px;
-    /* display: none; */
+    /* margin-right: 20px;
+    margin-top: 35px; */
+    display: none;
     /* visibility: hidden; */
 }
 
@@ -212,15 +212,15 @@ address {
     animation-delay: 1s;
 }
 
-.hero input:nth-of-type(1):checked ~ label:nth-of-type(1) {
+.hero input:nth-of-type(1):checked ~ .slider label:nth-of-type(1) {
     background-color: #69acc6;
 }
 
-.hero input:nth-of-type(2):checked ~ label:nth-of-type(2) {
+.hero input:nth-of-type(2):checked ~ .slider label:nth-of-type(2) {
     background-color: #69acc6;
 }
 
-.hero input:nth-of-type(3):checked ~ label:nth-of-type(3) {
+.hero input:nth-of-type(3):checked ~ .slider label:nth-of-type(3) {
     background-color: #69acc6;
 }
 
