@@ -166,14 +166,10 @@ address {
     text-align: center;
 
     top: -30px;
+    top: 150px;
+    background-image: url("../images/slider-1.jpg");
+    animation: auto-slider-for-slider 3s linear infinite;
 }
-
-/* .hero .slides {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-} */
 
 .hero input {
     margin-right: 20px;
@@ -185,21 +181,6 @@ address {
 .hero input:last-child {
     margin-right: 0;
 }
-
-/* .hero .controls {
-    height: 85px;
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: tomato;
-    z-index: 55;
-
-    transform: translateX(-50%);
-    left: 50%;
-} */
 
 .hero label {
     height: 25px;
@@ -216,105 +197,57 @@ address {
     margin-right: 15px;
 
     top: 680px;
-    z-index: 2;
+    z-index: 11;
 
     transform: translateX(-30px);
-    animation: auto-slider 3s linear infinite;
-}
-
-/* .hero label:last-child {
-    margin-right: 0;
-} */
-/* .hero input + label::after {
-    content: "";
-    position: absolute;
-    height: 17px;
-    width: 17px;
-    animation: auto-slider 3s linear infinite;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    background-color: #69acc7;
-    /* visibility: hidden; */
-/* visibility: visible; */
-/*
-    opacity: 0;
-    border-radius: 50%;
-} */
-
-.hero input:nth-of-type(1) + label {
-}
-
-.hero input:nth-of-type(2) + label {
-    animation-delay: 1s;
-}
-
-.hero input:nth-of-type(3) + label {
-    animation-delay: 2s;
-}
-
-/* .hero input:checked + label::after {
-    content: "";
-    position: absolute;
-    height: 17px;
-    width: 17px;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    background-color: #69acc7;
-
-    border-radius: 50%;
     /* animation: auto-slider 3s linear infinite; */
-/* animation-name: auto-slider;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite; */
-/* animation-delay: 1s; */
-/*
-} */
-
-.hero input:checked + label {
-    background-color: #69acc7;
-    border: 4px white solid;
-    animation: auto-slider 3s linear infinite;
 }
 
-.hero .slide {
-    height: 100%;
-    width: 100%;
-    /* position: relative; */
-    z-index: 0;
-
-    /* display: none; */
-    display: block;
-    /* opacity: 0; */
-
-    position: absolute;
-    animation: auto-slider-for-slider 3s linear infinite;
+.hero label:nth-of-type(1) {
+    margin-left: 50px;
 }
 
-.hero input:nth-of-type(1) + label + .slide {
-    z-index: 1;
-}
-
-.hero input:nth-of-type(2) + label + .slide {
+.hero label:nth-of-type(2) {
+    margin-left: 100px;
     animation-delay: 1s;
 }
 
-.hero input:nth-of-type(3) + label + .slide {
+.hero input:nth-of-type(1):checked ~ label:nth-of-type(1) {
+    background-color: #69acc6;
+}
+
+.hero input:nth-of-type(2):checked ~ label:nth-of-type(2) {
+    background-color: #69acc6;
+}
+
+.hero input:nth-of-type(3):checked ~ label:nth-of-type(3) {
+    background-color: #69acc6;
+}
+
+.hero label:nth-of-type(3) {
+    margin-left: 150px;
     animation-delay: 2s;
 }
 
-.hero .slide img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.hero input:checked ~ label {
+    border: 4px white solid;
+    animation: none;
+}
 
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.hero input:checked ~ .slider {
+    animation: none;
+}
+
+.hero input:nth-of-type(1):checked ~ .slider {
+    background-image: url("../images/slider-1.jpg");
+}
+
+.hero input:nth-of-type(2):checked ~ .slider {
+    background-image: url("../images/slider-2.jpg");
+}
+
+.hero input:nth-of-type(3):checked ~ .slider {
+    background-image: url("../images/slider-3.jpg");
 }
 
 .hero .text {
@@ -587,16 +520,22 @@ form select {
 
 @keyframes auto-slider-for-slider {
     0% {
-        z-index: 1;
+        background-image: url("../images/slider-1.jpg");
     }
     32% {
-        z-index: 1;
+        background-image: url("../images/slider-1.jpg");
     }
     33% {
-        z-index: 0;
+        background-image: url("../images/slider-2.jpg");
+    }
+    65% {
+        background-image: url("../images/slider-2.jpg");
+    }
+    66% {
+        background-image: url("../images/slider-3.jpg");
     }
     100% {
-        z-index: 0;
+        background-image: url("../images/slider-3.jpg");
     }
 }
 
@@ -613,9 +552,10 @@ form select {
     visibility: hidden; */
 /*
 } */
-
+/* 
 .hero input:checked ~ label {
     /* .hero label ~ input:checked,
 .hero label ~ label ~ input:checked label { */
+/*
     animation: none;
-}
+} */
