@@ -64,28 +64,28 @@ address {
 
 .container {
     /* width: 80%; */
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
 @media (min-width: 0px) {
     .container {
-        width: 660px;
+        max-width: 660px;
     }
 }
 @media (min-width: 768px) {
     .container {
-        width: 750px;
+        max-width: 750px;
     }
 }
 @media (min-width: 992px) {
     .container {
-        width: 970px;
+        max-width: 970px;
     }
 }
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        max-width: 1170px;
     }
 }
 
@@ -189,7 +189,6 @@ address {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 /* ----------------- hero ----------------- */
@@ -349,6 +348,10 @@ address {
 /* ----------------- !hero ----------------- */
 
 /* ----------------- features section ----------------- */
+.features .row {
+    justify-content: center;
+}
+
 .feature {
     border: 1px solid #e1e8ec;
     border-radius: 10px;
@@ -358,7 +361,7 @@ address {
     /* min-width: 10%; */
     /* max-width: 20%; */
     /* width: 25%; */
-    width: 150px;
+    width: 265px;
     box-sizing: border-box;
 }
 
@@ -406,7 +409,20 @@ address {
 
 .news .post {
     padding: 0 15px;
-    width: 33%;
+    /* width: 33%; */
+    width: 300px;
+}
+
+@media (min-width: 992px) {
+    .news .post {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1120px) {
+    .news .post {
+        width: 300px;
+    }
 }
 
 .news .post h2 {
@@ -457,11 +473,15 @@ address {
 }
 
 .mission .mission-left {
-    width: 66%;
+    /* width: 66%; */
+    width: 660px;
 }
-
 .mission .mission-left p {
     margin-bottom: 15px;
+}
+
+.mission .mission-right {
+    width: 390px;
 }
 
 .mission .mission-right ul {
@@ -506,12 +526,42 @@ address {
 
 .neque h2 {
     margin-bottom: 20px;
-    font-size: 4em;
+    font-size: 60px;
 }
 
 .neque p {
     font-size: 20px;
     margin-bottom: 24px;
+}
+
+@media (min-width: 0px) {
+    .neque h2 {
+        font-size: 26px;
+    }
+
+    .neque p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    .neque h2 {
+        font-size: 40px;
+    }
+
+    .neque p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .neque h2 {
+        font-size: 60px;
+    }
+
+    .neque p {
+        font-size: 20px;
+    }
 }
 /* ----------------- !neque section ----------------- */
 
@@ -524,6 +574,18 @@ address {
 .join .row {
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 0px) {
+    .join .row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 770px) {
+    .join .row {
+        flex-direction: row;
+    }
 }
 
 .join h2 {
@@ -548,7 +610,7 @@ form select {
 .join input[type="text"] {
     height: 60px;
     width: 500px;
-    max-width: 100%;
+    /* max-width: 100%; */
     box-sizing: border-box;
     /* padding: 20px 100px 20px 20px; */
     padding: 10px;
@@ -590,13 +652,28 @@ form select {
 }
 
 .footer .row {
-    height: 308px;
+    /* height: 308px; */
+    justify-content: space-between;
+}
+
+@media (min-width: 0px) {
+    .footer .row {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 770px) {
+    .footer .row {
+        justify-content: space-between;
+    }
 }
 
 .footer-column {
-    width: 25%;
+    /* width: 25%; */
     padding-left: 15px;
     padding-right: 15px;
+    width: 260px;
+    margin-bottom: 40px;
 }
 
 .footer .footer-column address {
@@ -618,7 +695,6 @@ form select {
 }
 
 .footer-column ul {
-    margin-bottom: 40px;
 }
 
 .footer-column li {
@@ -676,6 +752,7 @@ form select {
 
 .footer .container .copyright {
     margin-top: 15px;
+    margin-left: 15px;
 }
 
 .button {
