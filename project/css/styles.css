@@ -231,7 +231,7 @@ address {
     color: white;
     max-width: 970px;
     margin: 0 auto;
-    padding: 250px 0 20px;
+    padding: 200px 0 20px;
     position: relative;
     z-index: 2;
 }
@@ -247,6 +247,7 @@ address {
 }
 
 .hero .button {
+    margin-top: 20px;
     margin-bottom: 35px;
 }
 
@@ -274,7 +275,7 @@ address {
     bottom: 30px;
     z-index: 11;
 
-    transform: translateX(-15px);
+    transform: translateX(-20px);
     animation: auto-slider-labels 6s linear infinite;
     transition: ease;
 }
@@ -361,7 +362,7 @@ address {
     /* min-width: 10%; */
     /* max-width: 20%; */
     /* width: 25%; */
-    width: 265px;
+    width: 260px;
     box-sizing: border-box;
 }
 
@@ -410,7 +411,7 @@ address {
 .news .post {
     padding: 0 15px;
     /* width: 33%; */
-    width: 300px;
+    width: 400px;
 }
 
 @media (min-width: 992px) {
@@ -421,7 +422,7 @@ address {
 
 @media (min-width: 1120px) {
     .news .post {
-        width: 300px;
+        width: 360px;
     }
 }
 
